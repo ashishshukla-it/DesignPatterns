@@ -1,10 +1,9 @@
 
 public class DesignPattern {
+	// Factory design pattern
 	public static void main(String args[]) {
-		Singleton s1 = Singleton.getInstance();
-		System.out.println("hello 1");
-		
-		Singleton s2 = Singleton.getInstance();
-		System.out.println("hello 2");
+		OsObjectFactory oof = new OsObjectFactory();
+		OS os = oof.returnOS("ios");
+		os.specification();
 	}
 }
